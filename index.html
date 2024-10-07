@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeraSim - Advanced AV Simulation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">TeraSim</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                    <li><a href="#components" class="hover:text-gray-300">Components</a></li>
+                    <li><a href="#docs" class="hover:text-gray-300">Docs</a></li>
+                    <li><a href="#community" class="hover:text-gray-300">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-gray-700 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Advanced Closed-loop Traffic Simulation Platform for AV Development and Evaluation</h2>
+            <p class="text-xl mb-8">Accelerating autonomous vehicle safety validation through high-fidelity simulation</p>
+            <div>
+                <a href="https://github.com/michigan-traffic-lab" class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-gray-700">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">About TeraSim</h2>
+            <p class="text-lg text-gray-300 mb-4">
+                TeraSim is a state-of-the-art traffic simulation environment meticulously designed for the precise evaluation of autonomous vehicle (AV) safety performance. Building upon the robust foundation of SUMO (Simulation of Urban Mobility), TeraSim significantly enhances simulation fidelity with advanced traffic behavior modeling and high-precision maneuver execution capabilities.
+            </p>
+            <p class="text-lg text-gray-300 mb-4">
+                At its core, TeraSim offers two primary simulation environments: the Naturalistic Driving Environment (NDE) and the Naturalistic and Adversarial Driving Environment (NADE). NDE generates statistically representative traffic scenarios, while NADE focuses on accelerated safety-critical event testing, enabling comprehensive AV evaluation across a spectrum of driving conditions.
+            </p>
+            <p class="text-lg text-gray-300">
+                Our platform features a comprehensive Python API, facilitating seamless integration with diverse autonomous driving systems and industry-standard simulation tools. This versatility positions TeraSim as an indispensable resource for researchers, developers, and industry professionals engaged in cutting-edge autonomous vehicle technology development and validation.
+            </p>
+        </div>
+    </section>
+
+    <section id="components" class="bg-gray-800 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">TeraSim Components</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="componentGrid">
+                <!-- Components will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="docs" class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Documentation</h2>
+            <p class="text-lg text-gray-300 mb-8">Detailed technical documentation and user guides are in development to facilitate optimal utilization of TeraSim's advanced features.</p>
+            <div class="flex justify-center space-x-8">
+                <span class="flex items-center text-gray-400 cursor-not-allowed">
+                    <span class="mr-2">📖</span>
+                    User Guide (Coming Soon)
+                </span>
+                <span class="flex items-center text-gray-400 cursor-not-allowed">
+                    <span class="mr-2">💻</span>
+                    API Reference (Coming Soon)
+                </span>
+                <span class="flex items-center text-gray-400 cursor-not-allowed">
+                    <span class="mr-2">📸</span>
+                    Examples (Coming Soon)
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="bg-gray-800 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Join the Community</h2>
+            <p class="text-lg text-gray-300 mb-8">Engage with the TeraSim developer community and stay updated on the latest advancements in AV simulation technology.</p>
+            <div class="flex justify-center">
+                <a href="https://github.com/michigan-traffic-lab" class="flex items-center text-gray-300 hover:text-white">
+                    <span class="mr-2">🐙</span>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const components = [
+            {
+                name: 'TeraSim-Core',
+                description: 'The cornerstone of our simulation ecosystem, TeraSim-Core extends SUMO\'s capabilities with advanced control algorithms and high-fidelity maneuver execution for all traffic participants. It provides a robust framework for conducting comprehensive AV safety evaluations in complex traffic scenarios.'
+            },
+            {
+                name: 'TeraSim-NDE',
+                description: 'Our AI-driven simulation module offering a Naturalistic Driving Environment (NDE) for generating statistically representative traffic scenarios, enabling comprehensive AV evaluation in realistic driving conditions.',
+                link: 'https://github.com/michigan-traffic-lab/Learning-Naturalistic-Driving-Environment'
+            },
+            {
+                name: 'TeraSim-NADE',
+                description: 'An advanced simulation environment focusing on Naturalistic and Adversarial Driving Environment  (NADE) for accelerated safety-critical event testing and edge case discovery in AV development.',
+                link: 'https://github.com/michigan-traffic-lab/Dense-Deep-Reinforcement-Learning'
+            },
+            {
+                name: 'TeraSim-Cosim',
+                description: 'Enables seamless integration with industry-standard tools such as CARLA and Autoware, facilitating comprehensive testing that combines TeraSim\'s advanced traffic modeling with high-fidelity sensor simulation and accurate vehicle dynamics.',
+            },
+            {
+                name: 'TeraSim-Data-Zoo',
+                description: 'Facilitates the incorporation of diverse, real-world datasets into TeraSim simulations, ensuring that AV testing scenarios are grounded in empirically-derived traffic patterns and behaviors for maximum relevance and reliability.'
+            },
+            {
+                name: 'Mcity-AV-challenge',
+                description: 'An open-box testing environment for third-party AV integration, leveraging TeraSim components to provide a high-fidelity simulation of the Mcity Test Facility.',
+                link: 'https://github.com/michigan-traffic-lab/Mcity-AV-Challenge.git'
+            }
+        ];
+        
+        const componentGrid = document.getElementById('componentGrid');
+        
+        components.forEach(component => {
+            const div = document.createElement('div');
+            div.className = 'bg-gray-700 p-6 rounded-lg';
+            div.innerHTML = `
+                <h3 class="text-xl font-semibold mb-4">${component.name}</h3>
+                <p class="text-gray-300 mb-4">${component.description}</p>
+                ${component.link 
+                    ? `<a href="${component.link}" class="text-blue-300 hover:underline">Learn more</a>`
+                    : `<span class="text-gray-400 cursor-not-allowed">To be released soon</span>`
+                }
+            `;
+            componentGrid.appendChild(div);
+        });
+    </script>
+</body>
+</html>
